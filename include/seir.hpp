@@ -9,7 +9,7 @@
 #include "modele.hpp"
 using namespace std;
 
-class seir: public modele
+class seir : public modele
 {
 private:
     double beta;
@@ -18,6 +18,7 @@ private:
     double nu;
     double mu;
     double g;
+
 public:
     seir();
     seir(double be, double ga, double al, double n, double m, double g1);
@@ -51,10 +52,10 @@ valarray<double> seir::computeFlux(valarray<double> vec)
     double E = vec[1];
     double I = vec[2];
     double R = vec[3];
-    res[0] = (-beta*S*E-(nu+g)*S+mu*(S+I+R));
-    res[1] = (beta*S*E-alpha*E-(g+nu)*E);
-    res[2] = (alpha*E-gamma*I-(nu+g)*I);
-    res[3] = (gamma*I-(nu+g)*R);
+    res[0] = (-beta * S * E - (nu + g) * S + mu * (S + I + R));
+    res[1] = (beta * S * E - alpha * E - (g + nu) * E);
+    res[2] = (alpha * E - gamma * I - (nu + g) * I);
+    res[3] = (gamma * I - (nu + g) * R);
     return res;
 }
 

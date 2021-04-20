@@ -15,11 +15,12 @@ protected:
     double dt;
     vector<valarray<double>> variables;
     modele *mod;
+
 public:
     solveur();
     void setModele(modele *m);
     void setDt(double t);
-    virtual void applique()=0;
+    virtual void applique() = 0;
     void initSolutions();
     valarray<double> getVector();
     double getCurrentTime();

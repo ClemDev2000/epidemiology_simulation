@@ -9,7 +9,7 @@
 #include "modele.hpp"
 using namespace std;
 
-class sir: public modele
+class sir : public modele
 {
 private:
     double beta;
@@ -17,6 +17,7 @@ private:
     double mu;
     double nu;
     double g;
+
 public:
     sir();
     sir(double be, double ga, double m, double n, double g1);
@@ -47,9 +48,9 @@ valarray<double> sir::computeFlux(valarray<double> vec)
     double S = vec[0];
     double I = vec[1];
     double R = vec[2];
-    res[0] = (-beta*S*I-(nu+g)*S+mu*(S+I+R));
-    res[1] = (beta*S*I-gamma*I-(nu+g)*I);
-    res[2] = (gamma*I-(nu+g)*R);
+    res[0] = (-beta * S * I - (nu + g) * S + mu * (S + I + R));
+    res[1] = (beta * S * I - gamma * I - (nu + g) * I);
+    res[2] = (gamma * I - (nu + g) * R);
     return res;
 }
 

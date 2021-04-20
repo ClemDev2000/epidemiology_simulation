@@ -13,12 +13,13 @@ class modele
 protected:
     int n;
     valarray<double> X;
+
 public:
     modele();
     modele(int si);
     valarray<double> getX();
     void setX(valarray<double> X0);
-    virtual valarray<double> computeFlux(valarray<double> vec)=0;
+    virtual valarray<double> computeFlux(valarray<double> vec) = 0;
 };
 
 modele::modele()

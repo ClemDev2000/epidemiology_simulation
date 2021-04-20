@@ -26,12 +26,12 @@ void rk2::applique()
     valarray<double> Xn = variables.back();
     valarray<double> fluxXn = mod->computeFlux(Xn);
 
-    valarray<double> Xnp12 = 0.5*fluxXn*dt+Xn;
+    valarray<double> Xnp12 = 0.5 * fluxXn * dt + Xn;
 
     valarray<double> fluxXnp12 = mod->computeFlux(Xnp12);
-    valarray<double> Xnp1 = 0.5*fluxXnp12*dt+Xn;
+    valarray<double> Xnp1 = 0.5 * fluxXnp12 * dt + Xn;
 
-    variables.push_back(Xnp1); 
+    variables.push_back(Xnp1);
 }
 
 #endif

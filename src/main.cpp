@@ -20,7 +20,8 @@ void display(valarray<double> va)
     cout << "]" << endl;
 }
 
-int main() {
+int main()
+{
     double beta = 0.6;
     double gamma = 0.2;
     double dt = 1;
@@ -28,7 +29,7 @@ int main() {
 
     valarray<double> X0(3);
     double S0 = 0.999;
-    double I0 = 1-S0;
+    double I0 = 1 - S0;
     double R0 = 0;
     X0[0] = S0;
     X0[1] = I0;

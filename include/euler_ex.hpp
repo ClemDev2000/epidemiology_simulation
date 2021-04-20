@@ -25,7 +25,7 @@ void euler_ex::applique()
 {
     valarray<double> Xn = variables.back();
     valarray<double> fluxXn = mod->computeFlux(Xn);
-    valarray<double> Xnp1 = fluxXn*dt+Xn;
+    valarray<double> Xnp1 = fluxXn * dt + Xn;
     variables.push_back(Xnp1);
 }
 
